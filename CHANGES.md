@@ -20,7 +20,7 @@ Contributions by Matthew Davidson and Stefan van den Oord.
 
 ### Breaking changes
 
-* Add `wrap-validation` middleware to validate Ring maps [#679](https://github.com/clj-commons/aleph/pull/679). This adds a stricter interpretation of the ring spec, which may fail on previously valid input, for example using `:request-method "GET"` instead of `:request-method :get`.
+* Add `wrap-validation` middleware to validate Ring maps [#679](https://github.com/clj-commons/aleph/pull/679). This adds a stricter interpretation of the ring spec, which may fail on previously valid input. For example, a string `:request-method` like `"GET"` was previously accepted, but now it must be a keyword like `:get`.
 
 Contributions by Arnaud Geiser, Ertuğrul Çetin, Jeroen van Dijk, David Ongaro, 
 Matthew Davidson, and Moritz Heidkamp.
