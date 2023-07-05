@@ -14,10 +14,13 @@ Contributions by Matthew Davidson and Stefan van den Oord.
 
 * Fix backwards-compatibility for transport options
 * Bump Netty to 4.1.89.Final, and io_uring to 0.0.18.Final
-* Add `wrap-validation` middleware to validate Ring maps 
 * Bump deps and example deps
 * Upgrade CircleCI instance size
 * Switch to pedantic deps for CircleCI
+
+### Breaking changes
+
+* Add `wrap-validation` middleware to validate Ring maps [#679](https://github.com/clj-commons/aleph/pull/679). This adds a stricter interpretation of the ring spec, which may fail on previously valid input, for example `:request-method "GET"`.
 
 Contributions by Arnaud Geiser, Ertuğrul Çetin, Jeroen van Dijk, David Ongaro, 
 Matthew Davidson, and Moritz Heidkamp.
